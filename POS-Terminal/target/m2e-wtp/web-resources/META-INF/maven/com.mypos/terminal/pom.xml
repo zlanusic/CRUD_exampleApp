@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.mypos</groupId>
+	<artifactId>terminal</artifactId>
+	<name>POS-Terminal</name>
+	<packaging>war</packaging>
+	<version>1.0.0-BUILD-SNAPSHOT</version>
+	<properties>
+		<java-version>1.6</java-version>
+		<spring.version>3.2.0.RELEASE</spring.version>
+	</properties>
+	
+	<repositories>
+			<repository>
+				<snapshots><enabled>false</enabled></snapshots>
+				<id>com.springsource.repository.maven.release</id>
+				<name>Spring Maven Milestone Repository</name>
+				<url>http://maven.springframework.org/release/</url>
+			</repository>
+			<repository>
+    			<id>springsource-repo</id>
+    			<name>SpringSource Repository</name>
+    			<url>http://repo.springsource.org/release</url>
+			</repository>
+	</repositories>
+	
+	<dependencies>
+	
+	<!-- ====================== -->
+	<!--    Spring MVC: Core    -->
+	<!-- ====================== -->
+	
+	<!-- Spring -->
+		
+		 <dependency>
+        		<groupId>org.springframework</groupId>
+        		<artifactId>spring-beans</artifactId>
+        		<version>3.2.0.RELEASE</version>
+     	 </dependency>
+     	 <dependency>
+        		<groupId>org.springframework</groupId>
+        		<artifactId>spring-web</artifactId>
+        		<version>3.2.0.RELEASE</version>
+     	 </dependency>
+     	 <dependency>
+        		<groupId>org.springframework</groupId>
+        		<artifactId>spring-webmvc</artifactId>
+        		<version>3.2.0.RELEASE</version>
+     	 </dependency>
+     	 <dependency>
+     	 		<groupId>org.springframework</groupId>
+     	 		<artifactId>spring-core</artifactId>
+           		<version>3.2.0.RELEASE</version>
+     	 </dependency>
+     	 <dependency>
+          		<groupId>org.springframework</groupId>
+          		<artifactId>spring-tx</artifactId>
+           		<version>3.2.0.RELEASE</version>
+         </dependency>
+         <dependency>
+          		<groupId>org.springframework</groupId>
+          		<artifactId>spring-jdbc</artifactId>
+          		<version>3.2.0.RELEASE</version>
+      	 </dependency>
+      	 
+      	<dependency>
+          		<groupId>org.springframework</groupId>
+          		<artifactId>spring-aop</artifactId>
+          		<version>3.2.0.RELEASE</version>
+      	</dependency>
+      	<dependency>
+				<groupId>org.springframework</groupId>
+ 				<artifactId>spring-context</artifactId>
+ 				<version>3.2.0.RELEASE</version>
+			<exclusions>
+				<!-- Exclude Commons Logging in favor of SLF4j -->
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				 </exclusion>
+			</exclusions>
+	  	</dependency>
+	  	<dependency>
+				<groupId>taglibs</groupId>
+				<artifactId>standard</artifactId>
+				<version>1.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+			<scope>provided</scope>
+		</dependency>
+	
+	<!-- Hibernate -->
+		 <dependency>
+          		<groupId>org.hibernate</groupId>
+          		<artifactId>hibernate-entitymanager</artifactId>
+          		<version>4.1.9.Final</version>
+      	 </dependency>
+      
+      
+      	<dependency>
+          		<groupId>javax.ejb</groupId>
+          		<artifactId>ejb-api</artifactId>
+          		<version>3.0</version>
+          		<scope>provided</scope>
+      	</dependency>
+      
+      <!-- =============================== -->
+      <!--   Spring MVC: Server Validation -->
+      <!-- =============================== -->
+      
+      	<dependency>
+				<groupId>javax.validation</groupId>
+				<artifactId>validation-api</artifactId>
+				<version>1.0.0.GA</version>
+		</dependency>
+		
+		<dependency>
+          		<groupId>org.hibernate</groupId>
+          		<artifactId>hibernate-core</artifactId>
+          		<version>4.1.9.Final</version>
+      	</dependency>
+      	<dependency>
+          		<groupId>org.hibernate</groupId>
+          		<artifactId>hibernate-validator</artifactId>
+          		<version>4.3.1.Final</version>
+      	</dependency>
+		
+      <!-- Logging -->
+		<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-api</artifactId>
+				<version>1.6.6</version>
+		</dependency>
+		<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>jcl-over-slf4j</artifactId>
+				<version>1.6.6</version>
+				<scope>runtime</scope>
+		</dependency>
+		<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.7.2</version>
+				<scope>runtime</scope>
+		</dependency>
+		
+		<!-- AspectJ -->
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjrt</artifactId>
+			<version>1.6.10</version>
+		</dependency>
+		<!-- @Inject -->
+		<dependency>
+			<groupId>javax.inject</groupId>
+			<artifactId>javax.inject</artifactId>
+			<version>1</version>
+		</dependency>
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+	
+	
+		
+		<!-- ============================= -->
+		<!-- SpringMVC: Server Integration -->
+		<!-- ============================= -->
+		
+		
+		<dependency>
+				<groupId>javax.persistence</groupId>
+				<artifactId>persistence-api</artifactId>
+				<version>1.0</version>
+		</dependency>
+		<dependency>
+          		<groupId>org.hibernate</groupId>
+          		<artifactId>hibernate</artifactId>
+          		<version>3.2.7.ga</version>
+          		
+        </dependency>
+		<dependency>
+          		<groupId>org.hibernate</groupId>
+          		<artifactId>hibernate-annotations</artifactId>
+          		<version>3.5.6-Final</version>
+        </dependency>
+        <dependency>
+				<groupId>javax.transaction</groupId>
+				<artifactId>jta</artifactId>
+				<version>1.1</version>
+	    </dependency>
+	    <dependency>
+				<groupId>commons-dbcp</groupId>
+				<artifactId>commons-dbcp</artifactId>
+				<version>1.4</version>
+	    </dependency>
+      <!-- Servlet -->
+		<dependency>
+				<groupId>javax.servlet</groupId>
+				<artifactId>servlet-api</artifactId>
+				<version>2.5</version>
+				<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+          		<groupId>org.springframework</groupId>
+         	    <artifactId>spring-orm</artifactId>
+          		<version>3.2.0.RELEASE</version>
+      	</dependency>
+      	<dependency>
+				<groupId>hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>1.8.0.10</version>
+	    </dependency>
+	    
+	    <!-- ================================== -->
+	    <!-- Spring MVC: RESTful Web Services   -->
+	    <!-- ================================== -->
+	    
+	    
+	    <dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-oxm</artifactId>
+				<version>${spring.version}</version>
+	    </dependency>
+	
+	</dependencies>
+		       
+	
+			
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.9</version>
+                <configuration>
+                    <additionalProjectnatures>
+                        <projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
+                    </additionalProjectnatures>
+                    <additionalBuildcommands>
+                        <buildcommand>org.springframework.ide.eclipse.core.springbuilder</buildcommand>
+                    </additionalBuildcommands>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.5.1</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <configuration>
+                    <mainClass>org.test.int1.Main</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
